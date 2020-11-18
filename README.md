@@ -1,5 +1,5 @@
 # Spark DataFrame Task
-This goal of this project is to learn more about Spark's DataFrames, and SparkSQL APIs. The project is written in Scala.
+The goal of this project is to learn more about Spark's DataFrames, and SparkSQL APIs. The project is written in Scala.
 
 ## Table of Contents
 * [Introduction](#intro)
@@ -16,9 +16,9 @@ This goal of this project is to learn more about Spark's DataFrames, and SparkSQ
 
 <a name="intro"></a>
 ## Introduction
-This project was my implementation to a given task, where I should apply some operations to analyse the data, and get more information about the nature of the dataset used. In my analysis, I've applied to approaches. The first approach, probably is not the most correct way to analyse a dataset, where I apply some queries on the dataset to get a picture of the contribution of each attribute. The second approach, is to get top/last 10 students, apply some sum (), count (), and avg () functions on the dataset and show the output on the terminal.
+This project was my implementation to a given task, where I should apply some operations to analyse the data, and get more information about the nature of the dataset used. In my analysis, I've applied two approaches. The first approach, probably is not the most correct way to analyse a dataset, where I apply some queries on the dataset to get a picture of the contribution of each attribute. In the second approach, I applied some other traditional mathematical queries to analyse the dataset more, for example, to get top/last 10 students, apply some sum (), count (), and avg () functions on the dataset and show the output on the terminal.
 
-Also, I've worked with SparkSQL as well. I've learnt how to apply SQL queries on the loaded dataset directly from SparkSQL, which is another way of applying queries using the DataFrame APIs.
+Also, I've worked with SparkSQL as well. I've learnt how to apply SQL queries on the loaded dataset directly from SparkSQL, which is another way of applying queries instead of the DataFrame APIs.
 
 The project mainly contains two scala scripts. The first one which is "WorkingWithCSV.scala" file, contains the analysis, DataFrame preprocessing, and applying custom schema to the DataFrame.
 
@@ -47,6 +47,7 @@ I'm only going to list code snippets and their output to some of the attributes,
 
 #### Lunch
 * code
+
 ```
     // Relation between Lunch and Math Performance
     val studentsGroupedByLunch = studentsPerformanceDF
@@ -60,6 +61,7 @@ I'm only going to list code snippets and their output to some of the attributes,
 ``` 
 
 * terminal output
+
 ```
 +------------+------------------+-----+
 |       lunch|(math score >= 50)|count|
@@ -77,10 +79,12 @@ Percentage of free/reduced ^ true is: 0.259
 ```
 
 * graph
+
 ![lunch-attr-contribution](images/lunch.PNG)
 
 #### Test Preparation Course
 * code
+
 ```
     val studentsGroupedByTestPrep = studentsPerformanceDF
       .select (studentsPerformanceDF ("test preparation course"), studentsPerformanceDF ("math score") >= 50)
@@ -93,6 +97,7 @@ Percentage of free/reduced ^ true is: 0.259
 ```
 
 * terminal output
+
 ```
 +-----------------------+------------------+-----+
 |test preparation course|(math score >= 50)|count|
@@ -110,6 +115,7 @@ Percentage of none ^ true is: 0.535
 ```
 
 * graph
+
 ![test-preparation-course-attr-contribution](images/test-prep.PNG)
 
 
@@ -117,6 +123,7 @@ Percentage of none ^ true is: 0.535
 ### Other Mathematical Analysis
 
 * Top 10 Students
+
 ```
 +------+--------------+---------------------------+------------+-----------------------+----------+-------------+-------------+
 |gender|race/ethnicity|parental level of education|       lunch|test preparation course|math score|reading score|writing score|
@@ -135,6 +142,7 @@ Percentage of none ^ true is: 0.535
 ```
 
 * average score in math
+
 ```
 Average of math score between students: 66.089
 ```
@@ -145,7 +153,7 @@ We've used SparkSQL as well to apply analysis queries on the data, as an example
 
 There is no difference between applying SQL queries using SparkSQL or the DataFrame APIs, the same level of optimization provided by Spark gets applied on both of them.
 
-Here's a simple example from one our implemented queries to retrieve the top 3 students who scored in math more than in reading but less than in writing
+Here's a simple example from one of our implemented queries to retrieve the top 3 students who scored in math more than in reading but less than in writing
 
 ```
 spark.sql ("SELECT * FROM students WHERE math_score > reading_score AND math_score < writing_score ORDER BY math_score DESC LIMIT 3").show ()
@@ -153,7 +161,7 @@ spark.sql ("SELECT * FROM students WHERE math_score > reading_score AND math_sco
 
 <a name="parquet-files"></a>
 ## Working With Parquet Files
-In the second scala script "WorkingWithParquet.scala" it contains saving and loading data into a Hive Table stored as Parquet format. Rest of the code in this files is just the same analysis query that we've applied in the "WorkingWithCSV.scala" file.
+In the second scala script "WorkingWithParquet.scala" it contains saving and loading data into a Hive Table stored as Parquet format. The rest of the code in this file is just the same analysis queries that we've applied in the "WorkingWithCSV.scala" file.
 
 <a name="parquet-files-csv-vs-parquet"></a>
 ### Difference Between CSV and Parquet Approaches
