@@ -33,7 +33,7 @@ In this README.md file, I'll try to quickly go through the two scripts, as descr
 
 <a name="dataset"></a>
 ## Dataset
-Dataset used represents the data of 1000 students, it mainly contains some students attributes and their performance in 3 exams, math, reading, and writing exams. Attributes included in the data file are their gender, race/ethnicity, parental level of education, whether they ate their standard lunch meal, and whether they took their test preparation course. The full dataset and its description are on kaggle ![here](https://www.kaggle.com/spscientist/students-performance-in-exams/).
+Dataset used represents the data of 1000 students, it mainly contains some students attributes and their performance in 3 exams, math, reading, and writing exams. Attributes included in the data file are their gender, race/ethnicity, parental level of education, whether they ate their standard lunch meal, and whether they took their test preparation course. The full dataset and its description are on kaggle [here](https://www.kaggle.com/spscientist/students-performance-in-exams/).
 
 <a name="analysis"></a>
 ## Analysis
