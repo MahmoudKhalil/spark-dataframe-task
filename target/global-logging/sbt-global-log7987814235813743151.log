@@ -1,0 +1,16 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(assembly, None, None)[0m
+[0m[[0m[33mwarn[0m] [0m[0mbuild source files have changed[0m
+[0m[[0m[33mwarn[0m] [0m[0mmodified files: [0m
+[0m[[0m[33mwarn[0m] [0m[0m  /home/cloudera/IdeaProjects/spark-dataframe-task/build.sbt[0m
+[0m[[0m[33mwarn[0m] [0m[0mApply these changes by running `reload`.[0m
+[0m[[0m[33mwarn[0m] [0m[0mAutomatically reload the build when source changes are detected by setting `Global / onChangedBuildSource := ReloadOnSourceChanges`.[0m
+[0m[[0m[33mwarn[0m] [0m[0mDisable this warning by setting `Global / onChangedBuildSource := IgnoreSourceChanges`.[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: assembly[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Scala sources to /home/cloudera/IdeaProjects/spark-dataframe-task/target/scala-2.11/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mNon-compiled module 'compiler-bridge_2.11' for Scala 2.11.12. Compiling...[0m
+[0m[[0m[0minfo[0m] [0m[0m  Compilation completed in 22.81s.[0m
+[0m[[0m[33mwarn[0m] [0m[0mmultiple main classes detected: run 'show discoveredMainClasses' to see the list[0m
+[0m[[0m[0minfo[0m] [0m[0mStrategy 'discard' was applied to a file (Run the task at debug level to see details)[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 42 s, completed Nov 18, 2020 3:16:45 AM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(idea-shell, None, None)[0m

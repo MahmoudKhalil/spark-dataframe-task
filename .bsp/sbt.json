@@ -1,0 +1,1 @@
+{"name":"sbt","version":"1.4.3","bspVersion":"2.0.0-M5","languages":["scala"],"argv":["/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.265.b01-0.el6_10.x86_64/jre/bin/java","-Xms100m","-Xmx100m","-classpath","/home/cloudera/.IdeaIC2018.3/config/plugins/Scala/launcher/sbt-launch.jar","xsbt.boot.Boot","-bsp"]}

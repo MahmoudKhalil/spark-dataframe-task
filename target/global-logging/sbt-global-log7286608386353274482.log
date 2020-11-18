@@ -1,0 +1,91 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(early(addDefaultCommands), None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(addDefaultCommands, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(early(initialize), None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(initialize, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(--addPluginSbtFile=/tmp/idea1.sbt, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(addPluginSbtFile=/tmp/idea1.sbt, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(boot, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(writeSbtVersion, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(reload, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(sbtStashOnFailure, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(onFailure loadFailed, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(loadp, None, None)[0m
+[0m[[0m[0minfo[0m] [0m[0mwelcome to sbt 1.4.3 (Oracle Corporation Java 1.8.0_265)[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.loadUnit: plugins took 160.14649ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.loadUnit: defsScala took 0.740647ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Scanning directory /home/cloudera/.sbt/1.0/plugins[0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Found non-root projects [0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Done in /home/cloudera/.sbt/1.0/plugins, returning: ()[0m
+[0m[[0m[0mdebug[0m] [0m[0mdeducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin))), Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))))[0m
+[0m[[0m[0mdebug[0m] [0m[0m  :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)[0m
+[0m[[0m[0mdebug[0m] [0m[0mPlugins.deducer#function took 53.383429 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m          Load.resolveProject(global-plugins) took 114.310725ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m        Load.loadTransitive: finalizeProject(Project(id global-plugins, base: /home/cloudera/.sbt/1.0/plugins, plugins: List(<none>))) took 222.174468ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Done in /home/cloudera/.sbt/1.0/plugins, returning: (global-plugins)[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.loadUnit: loadedProjectsRaw took 280.552328ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.loadUnit: cleanEvalClasses took 0.684359ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit(file:/home/cloudera/.sbt/1.0/plugins/, ...) took 458.573419ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: load took 1043.665039ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: resolveProjects took 10.966754ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: finalTransforms took 156.188941ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: config.delegates took 19.831134ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: Def.make(settings)... took 1000.204006ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: structureIndex took 231.923497ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: mkStreams took 3.599773ms[0m
+[0m[[0m[0minfo[0m] [0m[0mloading global plugins from /home/cloudera/.sbt/1.0/plugins[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.defaultLoad until apply took 8714.002913ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: plugins took 29.943334ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: defsScala took 0.002743ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Scanning directory /home/cloudera/IdeaProjects/spark-dataframe-task/project[0m
+[0m[[0m[0mdebug[0m] [0m[0m            Load.loadUnit: mkEval took 8.011436ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Found non-root projects [0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Done in /home/cloudera/IdeaProjects/spark-dataframe-task/project, returning: ()[0m
+[0m[[0m[0mdebug[0m] [0m[0mdeducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin))), Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))))[0m
+[0m[[0m[0mdebug[0m] [0m[0m  :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)[0m
+[0m[[0m[0mdebug[0m] [0m[0mPlugins.deducer#function took 3.615293 ms[0m
+[0m[[0m[0minfo[0m] [0m[0mloading settings for project spark-dataframe-task-build from plugins.sbt,idea1.sbt ...[0m
+[0m[[0m[0mdebug[0m] [0m[0m              Load.resolveProject(spark-dataframe-task-build) took 4.686433ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m            Load.loadTransitive: finalizeProject(Project(id spark-dataframe-task-build, base: /home/cloudera/IdeaProjects/spark-dataframe-task/project, plugins: List(<none>))) took 9.367602ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Done in /home/cloudera/IdeaProjects/spark-dataframe-task/project, returning: (spark-dataframe-task-build)[0m
+[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: loadedProjectsRaw took 4169.659672ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: cleanEvalClasses took 7.845527ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m        Load.loadUnit(file:/home/cloudera/IdeaProjects/spark-dataframe-task/project/, ...) took 4208.356401ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: load took 4210.999746ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: resolveProjects took 0.197506ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: finalTransforms took 15.235566ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: config.delegates took 54.889419ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: Def.make(settings)... took 210.98655ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: structureIndex took 49.509488ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: mkStreams took 0.004156ms[0m
+[0m[[0m[0minfo[0m] [0m[0mloading project definition from /home/cloudera/IdeaProjects/spark-dataframe-task/project[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit: plugins took 9425.265907ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit: defsScala took 0.003946ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Scanning directory /home/cloudera/IdeaProjects/spark-dataframe-task[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.loadUnit: mkEval took 0.205895ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Found non-root projects [0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Done in /home/cloudera/IdeaProjects/spark-dataframe-task, returning: ()[0m
+[0m[[0m[0mdebug[0m] [0m[0mdeducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin))), Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbtassembly.AssemblyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(org.jetbrains.sbt.StructurePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(org.jetbrains.sbt.IdeaShellPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbtassembly.AssemblyPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.StructurePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.IdeaShellPlugin)))))[0m
+[0m[[0m[0mdebug[0m] [0m[0m  :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.SemanticdbPlugin,sbt.plugins.JUnitXmlReportPlugin,sbtassembly.AssemblyPlugin,org.jetbrains.sbt.IdeaShellPlugin,org.jetbrains.sbt.StructurePlugin,sbt.plugins.MiniDependencyTreePlugin)[0m
+[0m[[0m[0mdebug[0m] [0m[0mPlugins.deducer#function took 2.189946 ms[0m
+[0m[[0m[0minfo[0m] [0m[0mloading settings for project spark-dataframe-task from build.sbt ...[0m
+[0m[[0m[0mdebug[0m] [0m[0m        Load.resolveProject(spark-dataframe-task) took 60.758437ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.loadTransitive: finalizeProject(Project(id spark-dataframe-task, base: /home/cloudera/IdeaProjects/spark-dataframe-task, plugins: List(<none>))) took 63.947322ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Done in /home/cloudera/IdeaProjects/spark-dataframe-task, returning: (spark-dataframe-task)[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit: loadedProjectsRaw took 4876.205673ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit: cleanEvalClasses took 13.097909ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Load.loadUnit(file:/home/cloudera/IdeaProjects/spark-dataframe-task/, ...) took 14315.403993ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: load took 14324.964056ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: resolveProjects took 0.155914ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: finalTransforms took 83.305223ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: config.delegates took 0.894544ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: Def.make(settings)... took 175.666521ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: structureIndex took 54.458455ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: mkStreams took 0.003139ms[0m
+[0m[[0m[0minfo[0m] [0m[0mset current project to spark-dataframe-task (in build file:/home/cloudera/IdeaProjects/spark-dataframe-task/)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(sbtPopOnFailure, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(resumeFromFailure, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(notifyUsersAboutShell, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(iflast shell, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(idea-shell, None, None)[0m
