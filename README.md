@@ -35,6 +35,19 @@ In this README.md file, I'll try to quickly go through the two scripts, as descr
 ## Dataset
 Dataset used represents the data of 1000 students, it mainly contains some students attributes and their performance in 3 exams, math, reading, and writing exams. Attributes included in the data file are their gender, race/ethnicity, parental level of education, whether they ate their standard lunch meal, and whether they took their test preparation course. The full dataset and its description are on kaggle [here](https://www.kaggle.com/spscientist/students-performance-in-exams/).
 
+### Data Dictionary
+
+| Field Name                  | Data Type | Description                                                           |
+|-----------------------------|-----------|-----------------------------------------------------------------------|
+| gender                      | String    | Holds the gender of the student                                       |
+| race/ethnicity              | String    | Holds the race of each student                                        |
+| parental level of education | String    | Holds the maximum level of education achieved by each student parents |
+| lunch                       | String    | Holds the type of meal each student ate before exam                   |
+| test preparation course     | String    | Holds whether or not a student completed any test preparation course  |
+| math score                  | Integer   | Holds each student score in math                                      |
+| reading score               | Integer   | Holds each student score in reading                                   |
+| writing score               | Integer   | Holds each student score in writing                                   |
+
 <a name="analysis"></a>
 ## Analysis
 In my analysis, I wanted to see how each attribute can impact the data, and by how much each attribute can contribute to the score of the students. So I decided to focus only on the "math score" results to do my analysis on. However, this may not be the correct way to do the analysis, a more correct way is to, for example, compare the percentage of passed female students out of all the female students to the passed male students out of all the male students rather than comparing the passed female to the passed male students out of all students.
@@ -80,7 +93,7 @@ Percentage of free/reduced ^ true is: 0.259
 
 * graph
 
-![lunch-attr-contribution](images/lunch.PNG)
+![lunch-graph](images/lunch.PNG)
 
 #### Test Preparation Course
 * code
@@ -116,7 +129,7 @@ Percentage of none ^ true is: 0.535
 
 * graph
 
-![test-preparation-course-attr-contribution](images/test-prep.PNG)
+![test-prep](images/test-prep.PNG)
 
 
 <a name="analysis-mathematical-analysis"></a>
