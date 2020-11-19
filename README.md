@@ -166,10 +166,109 @@ We've used SparkSQL as well to apply analysis queries on the data, as an example
 
 There is no difference between applying SQL queries using SparkSQL or the DataFrame APIs, the same level of optimization provided by Spark gets applied on both of them.
 
-Here's a simple example from one of our implemented queries to retrieve the top 3 students who scored in math more than in reading but less than in writing
+In this section, I'm going to list the three queries I've applied on the dataset, their code, and the terminal results from those queries.
+
+### Top 3 Female Students Scored in Math for Each Parental Level of Education
+
+* code
+
+```
+spark.sql ("SELECT gender, parental_level_of_education, math_score FROM ( " +
+      "SELECT gender, parental_level_of_education, math_score, row_number () OVER (PARTITION BY parental_level_of_education ORDER BY math_score DESC) row_num " +
+      "FROM students " +
+      "WHERE gender=\"female\" ) " +
+      "WHERE row_num <= 3 ").show () 
+```
+
+* result
+
+```
++------+---------------------------+----------+
+|gender|parental_level_of_education|math_score|
++------+---------------------------+----------+
+|female|           some high school|        97|
+|female|           some high school|        92|
+|female|           some high school|        85|
+|female|         associate's degree|       100|
+|female|         associate's degree|        96|
+|female|         associate's degree|        95|
+|female|                high school|        99|
+|female|                high school|        88|
+|female|                high school|        87|
+|female|          bachelor's degree|       100|
+|female|          bachelor's degree|        99|
+|female|          bachelor's degree|        97|
+|female|            master's degree|        94|
+|female|            master's degree|        92|
+|female|            master's degree|        90|
+|female|               some college|       100|
+|female|               some college|        98|
+|female|               some college|        88|
++------+---------------------------+----------+
+```
+
+### Top 3 Students Who Scored in Math More Than in Reading But Less Than in Writing
+
+* code
 
 ```
 spark.sql ("SELECT * FROM students WHERE math_score > reading_score AND math_score < writing_score ORDER BY math_score DESC LIMIT 3").show ()
+```
+
+* result
+
+```
++------+--------------+---------------------------+--------+-----------------------+----------+-------------+-------------+
+|gender|race/ethnicity|parental_level_of_education|   lunch|test preparation course|math_score|reading_score|writing_score|
++------+--------------+---------------------------+--------+-----------------------+----------+-------------+-------------+
+|  male|       group B|         associate's degree|standard|              completed|        91|           89|           92|
+|female|       group E|               some college|standard|                   none|        87|           85|           93|
+|female|       group E|               some college|standard|              completed|        86|           85|           91|
++------+--------------+---------------------------+--------+-----------------------+----------+-------------+-------------+
+```
+
+### Top 3 Students in Math, and in Reading, and in Writing
+
+In this query, we've used two approaches. The first approach, where I sorted the dataset descendingly according to the three columns (math, reading, and writing). The second one, where I manipulated the dataset and added a new column for the sum, then I got the first 3 students according to the descending order of the sum.
+
+#### Sorting 3 Columns Approach
+
+* code
+
+```
+spark.sql ("SELECT * FROM students ORDER BY math_score DESC, reading_score DESC, writing_score DESC LIMIT 3").show ()
+```
+
+* result
+
+```
++------+--------------+---------------------------+--------+-----------------------+----------+-------------+-------------+
+|gender|race/ethnicity|parental_level_of_education|   lunch|test preparation course|math_score|reading_score|writing_score|
++------+--------------+---------------------------+--------+-----------------------+----------+-------------+-------------+
+|female|       group E|         associate's degree|standard|                   none|       100|          100|          100|
+|  male|       group E|          bachelor's degree|standard|              completed|       100|          100|          100|
+|female|       group E|          bachelor's degree|standard|                   none|       100|          100|          100|
++------+--------------+---------------------------+--------+-----------------------+----------+-------------+-------------+
+```
+
+#### Sorting According to The Sum of The 3 Columns
+
+* code
+
+```
+spark.sql ("SELECT *, (math_score + reading_score + writing_score) as total_score_sum FROM students ORDER BY total_score_sum DESC LIMIT 3").show ()
+```
+
+* result
+
+```
++------+--------------+---------------------------+--------+-----------------------+----------+-------------+-------------+---------------+
+|gender|race/ethnicity|parental_level_of_education|   lunch|test preparation course|math_score|reading_score|writing_score|total_score_sum|
++------+--------------+---------------------------+--------+-----------------------+----------+-------------+-------------+---------------+
+|female|       group E|          bachelor's degree|standard|                   none|       100|          100|          100|            300|
+|  male|       group E|          bachelor's degree|standard|              completed|       100|          100|          100|            300|
+|female|       group E|         associate's degree|standard|                   none|       100|          100|          100|            300|
++------+--------------+---------------------------+--------+-----------------------+----------+-------------+-------------+---------------+
 ```
 
 <a name="parquet-files"></a>
