@@ -287,11 +287,10 @@ In my case, the dataset used was small, so there was no significant difference b
 
 <a name="setup"></a>
 ## Setup
-You can either open the project using IntelliJ, or execute the project from the attached .jar file using spark-submit command and specifying which script to run. The .jar file is in `target/scala-2.11/`
-
-```
-spark-submit --class WorkingWithCSV spark-task.jar
-```
+To run this project you could use IntelliJ IDE:
+* click on open from IntelliJ and select the project folder
+* navigate to the desired script under src->main->scala directory
+* right click and select run 'NameOfTheScript'
 
 <a name="license"></a>
 ## License
